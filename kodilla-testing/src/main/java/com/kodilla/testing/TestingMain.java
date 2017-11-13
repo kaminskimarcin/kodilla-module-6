@@ -8,8 +8,8 @@ public class TestingMain {
         Calculator calculator = new Calculator(5, 6);
 
         String result = simpleUser.getUsername();
-        Integer substractResult = calculator.substract();
-        Integer addResult = calculator.add();
+        Integer substractResult = calculator.getA() - calculator.getB();
+        Integer addResult = calculator.getA() + calculator.getB();
 
         if (result.equals("theForumUser")) {
             System.out.println("Test OK");
