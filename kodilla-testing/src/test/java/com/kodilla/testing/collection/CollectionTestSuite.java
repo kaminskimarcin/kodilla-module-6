@@ -44,7 +44,7 @@ public class CollectionTestSuite {
         //given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         System.out.println("Testing filled array list");
-        Integer expectedNumber[] = new Integer[]{0,2,4,6,8};
+        Integer expectedNumber[] = new Integer[]{0, 2, 4, 6, 8};
         ArrayList<Integer> filledList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             filledList.add(i);
