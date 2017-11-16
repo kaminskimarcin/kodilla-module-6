@@ -3,6 +3,7 @@ package com.kodilla.testing.collection;
 import org.junit.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CollectionTestSuite {
     @Before
@@ -27,22 +28,31 @@ public class CollectionTestSuite {
 
     @Test
     public void testOddNumbersExterminatorEmptyList() {
+        //given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         System.out.println("Testing empty array list...");
         ArrayList<Integer> emptyList = new ArrayList<>();
-        oddNumbersExterminator.exterminate(emptyList);
+        ArrayList<Integer> expectedList = new ArrayList<>();
+        //when
+        ArrayList<Integer> result = oddNumbersExterminator.exterminate(emptyList);
+        //then
+        Assert.assertEquals(result, expectedList);
     }
 
     @Test
     public void testOddNumbersExterminatorNormalList() {
+        //given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         System.out.println("Testing filled array list");
+        Integer expectedNumber[] = new Integer[]{0,2,4,6,8};
         ArrayList<Integer> filledList = new ArrayList<>();
-
         for (int i = 0; i < 10; i++) {
             filledList.add(i);
         }
-
-        oddNumbersExterminator.exterminate(filledList);
+        ArrayList<Integer> expectedList = new ArrayList<>(Arrays.asList(expectedNumber));
+        //when
+        ArrayList<Integer> result = oddNumbersExterminator.exterminate(filledList);
+        //then
+        Assert.assertEquals(result, expectedList);
     }
 }
