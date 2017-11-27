@@ -16,6 +16,6 @@ public class ArrayOperationsTestSuite {
         OptionalDouble result = ArrayOperations.getAverage(numbers);
 
         //Then
-        Assert.assertEquals(4.809523809523809, result);
+        Assert.assertEquals(4.809523809523809, result.getAsDouble(), 0);
     }
 }

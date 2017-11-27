@@ -15,7 +15,7 @@ public final class Continent {
         return name;
     }
 
-    public Set<Country> getCountryList() {
+    public Set<Country> getCountrySet() {
         return countryList;
     }
 
