@@ -3,6 +3,7 @@ package com.kodilla.stream.portfolio;
 import org.junit.Assert;
 import org.junit.Test;
 
+import javax.swing.text.html.Option;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
@@ -12,6 +13,9 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 import java.time.temporal.ChronoUnit.*;
+import java.util.OptionalDouble;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class BoardTestSuite {
     public Board prepareTestData() {
@@ -149,14 +153,13 @@ public class BoardTestSuite {
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-        Long timeFromStartToNow = project.getTaskLists().stream()
+        OptionalDouble timeFromStartToNow = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(k -> k.getTasks().stream())
                 .map(t -> t.getCreated().until(LocalDate.now()))
-                .count();
-        System.out.println(timeFromStartToNow);
-        //Then
+                .mapToInt(l -> l.getDays())
+                .average();
 
-        Assert.assertEquals(3, timeFromStartToNow, 0);
+        Assert.assertEquals(10, timeFromStartToNow.getAsDouble(), 0);
     }
 }
