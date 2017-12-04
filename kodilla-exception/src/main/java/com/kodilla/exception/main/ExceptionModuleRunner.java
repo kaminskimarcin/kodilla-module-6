@@ -6,10 +6,5 @@ import com.kodilla.exception.test.SecondChallenge;
 public class ExceptionModuleRunner {
 
     public static void main(String[] args) {
-
-        ExceptionHandling exceptionHandling = new ExceptionHandling();
-
-        exceptionHandling.testFunction();
-
     }
 }
