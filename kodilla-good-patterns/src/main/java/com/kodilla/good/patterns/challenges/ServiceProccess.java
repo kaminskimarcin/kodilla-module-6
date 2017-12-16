@@ -6,7 +6,11 @@ public class ServiceProccess {
 
         BuyRequestRetriever buyRequestRetriever = new BuyRequestRetriever();
 
-        BuyRequest buyRequest = buyRequestRetriever.retrieve();
+        User marcin = new User("Marcin", "Kamiński", "MarKam");
+
+        Product car = new Product("Audi", "100000$");
+
+        BuyRequest buyRequest = buyRequestRetriever.retrieve(marcin, car);
 
         productOrderService.process(buyRequest);
     }
