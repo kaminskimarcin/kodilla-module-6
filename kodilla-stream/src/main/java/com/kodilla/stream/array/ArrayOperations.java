@@ -7,7 +7,7 @@ import static java.util.stream.IntStream.*;
 public class ArrayOperations {
     public static OptionalDouble getAverage(int[] numbers) {
         String test = "";
-        String test2 = "";
+        String test2 = "test";
 
 
         range(0, numbers.length)
