@@ -10,5 +10,7 @@ public class KodillaCourseApplication {
 		SpringApplication.run(KodillaCourseApplication.class, args);
 
 		String test = "";
+		String test5 = "";
+		String test6 = "";
 	}
 }
