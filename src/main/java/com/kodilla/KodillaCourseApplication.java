@@ -9,6 +9,6 @@ public class KodillaCourseApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KodillaCourseApplication.class, args);
 
-		String test = "test123";
+		String test = "test5";
 	}
 }
