@@ -14,6 +14,7 @@ public class KodillaCourseApplication {
 		String test3 = "";
 		String test4 = "";
 		String test5 = "";
+		String test6 = "";
 
 
 	}
