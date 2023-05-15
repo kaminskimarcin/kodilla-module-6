@@ -8,7 +8,5 @@ public class KodillaCourseApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KodillaCourseApplication.class, args);
-
-		int test = 0;
 	}
 }
