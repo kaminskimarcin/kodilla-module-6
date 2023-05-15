@@ -11,10 +11,6 @@ public class KodillaCourseApplication {
 
 		String test = "";
 		String test2 = "";
-		String test3 = "";
-		String test4 = "";
-		String test5 = "";
-		String test6 = "";
 
 
 	}
